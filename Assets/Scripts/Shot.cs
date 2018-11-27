@@ -24,6 +24,7 @@ public class Shot : MonoBehaviour {
       GameObject particles = Instantiate(toyExplosionParticles, other.transform.position, Quaternion.identity);
       GameObject.Destroy(particles, 1.5f);
       GameObject.Destroy(other.gameObject);
+      GameObject.Destroy(gameObject);
       GameController.PlayToyExplosion();
     }
   }

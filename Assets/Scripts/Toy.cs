@@ -8,9 +8,11 @@ public class Toy : MonoBehaviour {
 
   private float speed;
 
+  private static float[] possibleSpeeds = new float[]{ 1.2f, 2.4f, 3.6f, 4.8f, 6.0f };
+
   void Awake() {
     player = GameObject.FindWithTag("Player").transform;
-    speed = (Random.value + 0.3f) * 1.8f;
+    speed = possibleSpeeds[Random.Range(0, possibleSpeeds.Length)];
   }
 
 	// Update is called once per frame
